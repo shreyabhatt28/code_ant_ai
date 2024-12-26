@@ -6,17 +6,24 @@
     overflow-y: scroll;
 }
 
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
 .side-div{
     width: 220px;
     height: 100vh;
 }
 
 .sidebar{
-    background-color: #FFFFFF;
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
+    background: white;
 }
 
 main{
@@ -53,6 +60,7 @@ main{
     height: 100%;
     display: flex;
     align-items: center;
+    background: white;
 }
 
 .sidebar-menu{
@@ -62,6 +70,7 @@ display: flex;
 flex-direction: column;
 gap:20px;
 align-items: center;
+background-color: white;
 }
 
 .user{
@@ -87,7 +96,11 @@ margin-right: 6px;
 
 .support{
     margin-top: auto;
+    width: 100%;
+    margin-bottom: 10px;
 }
+
+
 .menu-items{
     width: 100%;
 }
@@ -98,17 +111,22 @@ margin-right: 6px;
     color: #000;
     display: flex;
     text-decoration: none;
-    height: 30px;
+    height: 40px;
     cursor: pointer;
     border-radius: 6px;
     align-items: center;
-    justify-content: center;
+    font-size: small;
+}
+
+.menu-item > img{
+    margin:0 10px;
 }
 
 .menu-item.active-item {
     background-color: #1570EF;
     color: white;
 }
+
 
 @media (max-width:790px){
     .side-div{
@@ -123,9 +141,13 @@ margin-right: 6px;
 
     .side-div{
         width: 100%;
-        height: 100%;
+        height: 62.38px;
     }
 
+    .menu-div{
+        display: none;
+    }
+    
     .menu-icon{
         display: block;
         cursor: pointer;
@@ -134,4 +156,15 @@ margin-right: 6px;
     .nav-bar{
         box-shadow: 0 0 2px rgba(0,0,0,0.2);
     }
+
+    .sidebar-menu{
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap:8px;
+        margin: 0 auto;
+        background-color: white;
+        }
+
 }

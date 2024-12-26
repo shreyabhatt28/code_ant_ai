@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import '../layouts/styles/HomeLayout.css';
 import { NavLink } from 'react-router-dom';
 
@@ -6,46 +5,46 @@ const menuItems = [
     [
             {
             id:1,
-            icon:'',
+            icon:'/home-dark.svg',
             title:'Repositories',
             src: '/repositories'
             },
             {
             id:2,
-            icon:'',
+            icon:'/code.svg',
             title:'AI Code Review',
-            src: '/login'
+            src: '/code'
             },
-            // {
-            // id:3,
-            // icon:'',
-            // title:'Cloud Security',
-            // src: '/repositories'
-            // },
-            // {
-            // id:4,
-            // icon:'',
-            // title:'How to use',
-            // src: '/repositories'
-            // },
-            // {
-            // id:5,
-            // icon:'',
-            // title:'Settings',
-            // src: '/repositories'
-            // },
+            {
+            id:3,
+            icon:'/cloud.svg',
+            title:'Cloud Security',
+            src: 'cloud'
+            },
+            {
+            id:4,
+            icon:'/book.svg',
+            title:'How to use',
+            src: '/howto'
+            },
+            {
+            id:5,
+            icon:'/gear.svg',
+            title:'Settings',
+            src: 'settings'
+            },
     ],
     [
         {
         id:6,
-        icon:'',
+        icon:'/phone.svg',
         title:'Support',
-        src:'/login',
+        src:'/support',
         },
         {
         id:7,
-        icon:'',
-        title:'Logout',
+        icon:'/sign-out.svg',
+        title:'Logout (SignUp Page)',
         src:'/login'
         },
     ]
@@ -62,6 +61,7 @@ return(
         <div className='menu-items'>
             {menuItems[0].map(item => (
                 <NavLink className={({ isActive }) => isActive ? 'menu-item active-item' : 'menu-item'} to={item.src} key={item.id}>
+                    <img src= {item.icon}/>
                     {item.title} 
                 </NavLink>
             ))}
@@ -69,6 +69,7 @@ return(
         <div className='support'>
         {menuItems[1].map(item => (
                 <NavLink className={({ isActive }) => isActive ? 'menu-item active-item' : 'menu-item'} to={item.src} key={item.id}>
+                <img src= {item.icon}/>
                 {item.title} 
             </NavLink>
             ))}
